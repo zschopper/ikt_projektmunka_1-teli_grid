@@ -1,0 +1,127 @@
+:root {
+  --dummy: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 8px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  background-image: url("/assets/img/hatter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0 10px;
+  grid-template-areas:
+    "Header Header Header"
+    "Menu Gallery Content"
+    "Footer Footer Footer";
+}
+
+.header {
+  grid-area: Header;
+}
+
+.menu {
+  grid-area: Menu;
+}
+
+.gallery {
+  grid-area: Gallery;
+}
+
+.gallery-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 25px 10px;
+}
+
+.content {
+  grid-area: Content;
+}
+
+.footer {
+  grid-area: Footer;
+  text-align: center;
+}
+
+.gallery-image {
+  padding: 5px 5px 15px 5px;
+  border: 1px solid silver;
+  background-color: #efefef;
+  box-shadow: 2px 17px 12px 0px rgba(0, 0, 0, 0.57);
+}
+
+.rot-left {
+  transform: rotate(-6deg);
+}
+
+.rot-right {
+  transform: rotate(6deg);
+}
+
+.gallery-image img {
+  width: 100%;
+}
+
+.header {
+  background: url(/assets/img/fejlec.jpg);
+}
+h1 {
+  padding: 100px 0 20px;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  padding: 20px 0 10px;
+}
+
+ul.nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+ul.nav li {
+  background-color: #008de8;
+  border-radius: 8px;
+  width: 100%;
+  padding: 7px;
+  /* margin-bottom: 3px; */
+}
+
+.menu a {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
